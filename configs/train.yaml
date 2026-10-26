@@ -1,0 +1,24 @@
+# V1 training configuration
+data:
+  path: data/raw/credit.csv      # generated if missing
+  n_samples: 20000
+  seed: 42
+
+split:
+  test_size: 0.2
+  random_state: 42
+
+# Candidate models; the best one by `selection_metric` is saved.
+models:
+  logistic_regression:
+    C: 1.0
+    max_iter: 1000
+  random_forest:
+    n_estimators: 300
+    max_depth: 8
+    min_samples_leaf: 20
+
+selection_metric: roc_auc
+decision_threshold: 0.5
+
+output_dir: artifacts

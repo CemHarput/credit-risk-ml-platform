@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Data & artifacts (generated, not versioned)
+data/raw/*
+data/processed/*
+!data/**/.gitkeep
+artifacts/*
+!artifacts/.gitkeep
+mlruns/
+mlartifacts/
+
+# Env / IDE
+.env
+.idea/
+.vscode/
+.DS_Store
